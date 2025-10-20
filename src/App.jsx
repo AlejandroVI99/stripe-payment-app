@@ -40,7 +40,7 @@ function CheckoutForm() {
   const [userId, setUserId] = useState('user_456');
   
   //CAMBIAR A LA URL DEL BACKEND
-  const API_URL = 'http://localhost:3000';
+  const API_URL = 'https://e52282dd0809.ngrok-free.app';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -64,25 +64,50 @@ function CheckoutForm() {
       // Enviar uno o múltiples items
       const items = [
         {
-          item_id: "d0de41b5-a93b-4aa1-a141-638c3a6d8833",
-          variant_id: "cde32d9d-d488-48f7-89fc-f8b6cf9f570f",
-          quantity: 2, // Cantidad
+          item_id: "62aa09f3-b4ea-4b08-8490-9bf1e6877714",
+          variant_id: "867b5ae9-b444-435c-8c82-c525b6aef624",
+          quantity: 1, // Cantidad
           price: 80.00, // Precio unitario
-          store_id: "94c96633-ca56-437b-9784-0cc07a211f12",
+          store_id: "24ce36c4-fca0-4b20-a854-519683eafea4",
           modifiers: [{
-            modifier_option_id: "2f8bab9e-e986-4546-ac95-9f69ef70e143",
-            name: "Almendra",
-            price: 12,
-            quantity: 1
+            modifier_option_id: "0f07b274-89f8-4f04-839a-b6e90d8b1b7f",
+            name: "Deslactosada",
+            price: 10,
+            quantity: 2
           }]
         },
         {
-          item_id: "d0de41b5-a93b-4aa1-a141-638c3a6d8833",
-          variant_id: "bed51e3c-9179-4036-b540-1c79fc49cf03",
+          item_id: "62aa09f3-b4ea-4b08-8490-9bf1e6877714",
+          variant_id: "867b5ae9-b444-435c-8c82-c525b6aef624",
+          quantity: 1, // Cantidad
+          price: 80.00, // Precio unitario
+          store_id: "24ce36c4-fca0-4b20-a854-519683eafea4",
+          modifiers: [{
+            modifier_option_id: "0f07b274-89f8-4f04-839a-b6e90d8b1b7f",
+            name: "Deslactosada",
+            price: 10,
+            quantity: 1
+          },
+          {
+            modifier_option_id: "91864252-ab5c-4a02-9047-70fc7da87a15",
+            name: "Vainilla",
+            price: 10,
+            quantity: 1
+          },
+        ]
+        },
+        {
+          item_id: "a644d58c-93cc-4c7f-89ab-94fc09d9a0c6",
+          variant_id: "1643c6f5-0509-44e8-b32e-82160ee3a33e",
           quantity: 1,
           price: 70.00, // Precio unitario
-          store_id: "94c96633-ca56-437b-9784-0cc07a211f12",
-          modifiers: []
+          store_id: "24ce36c4-fca0-4b20-a854-519683eafea4",
+          modifiers: [{
+            modifier_option_id: "0f07b274-89f8-4f04-839a-b6e90d8b1b7f",
+            name: "Deslactosada",
+            price: 10,
+            quantity: 1
+          }]
         }
       ];
 
@@ -150,57 +175,6 @@ function CheckoutForm() {
         </h1>
 
         <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '20px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
-              Item ID
-            </label>
-            <input
-              type="text"
-              value={itemId}
-              onChange={(e) => setItemId(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '10px',
-                border: '1px solid #ddd',
-                borderRadius: '6px'
-              }}
-            />
-          </div>
-
-          <div style={{ marginBottom: '20px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
-              Monto (USD)
-            </label>
-            <input
-              type="number"
-              step="0.01"
-              value={amount}
-              onChange={(e) => setAmount(parseFloat(e.target.value))}
-              style={{
-                width: '100%',
-                padding: '10px',
-                border: '1px solid #ddd',
-                borderRadius: '6px'
-              }}
-            />
-          </div>
-
-          <div style={{ marginBottom: '20px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
-              User ID
-            </label>
-            <input
-              type="text"
-              value={userId}
-              onChange={(e) => setUserId(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '10px',
-                border: '1px solid #ddd',
-                borderRadius: '6px'
-              }}
-            />
-          </div>
 
           <div style={{ marginBottom: '20px' }}>
             <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
